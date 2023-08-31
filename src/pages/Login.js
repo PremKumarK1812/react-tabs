@@ -43,7 +43,7 @@ const Login = () => {
         <div>
           <div className='content'>
             <form className='form'>
-              <h1 className='title-1'>React Accordion</h1>
+              <h1 className='title-1'>React Tabs</h1>
               <div className='email'>
                 <label htmlFor='email-address'>Email Address</label>
                 <input
