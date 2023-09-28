@@ -141,7 +141,7 @@ const Login = () => {
                 className='show-credentials-button'
                 onClick={toggleCredentials}
               >
-                User Credentials
+                View Test Credentials
               </button>
               {showCredentials && (
                 <div className='test-credentials'>
