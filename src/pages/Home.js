@@ -39,6 +39,7 @@ const Home = () => {
   const logOutHandler = async () => {
     await signOut(auth)
       .then(() => {
+        alert('Logged out Successfully');
         navigate('/login');
       })
       .catch((err) => console.log(err.message));
@@ -57,7 +58,9 @@ const Home = () => {
               return (
                 <button
                   key={uuidv4()}
-                  className={`job-button ${index === value ? 'active-button' : null}`}
+                  className={`job-button ${
+                    index === value ? 'active-button' : null
+                  }`}
                   onClick={() => setValue(index)}
                 >
                   {job.company}

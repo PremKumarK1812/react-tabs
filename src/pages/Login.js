@@ -63,7 +63,7 @@ const Login = () => {
           navigate('/home');
         })
         .catch((err) => {
-          alert('Log in Failed');
+          alert(err.message);
           console.log('An error occurred', err.message);
         });
     }
@@ -82,7 +82,7 @@ const Login = () => {
         console.log(user);
       })
       .catch((err) => {
-        alert('Log in Failed');
+        alert(err.message);
         console.log('An error occurred', err.message);
       });
   };

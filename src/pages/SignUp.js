@@ -37,7 +37,7 @@ const SignUp = () => {
           console.log(user);
         })
         .catch((err) => {
-          alert('Sign up Failed');
+          alert(err.message);
           console.log('An error occurred', err.message);
         });
     }
@@ -103,23 +103,23 @@ const SignUp = () => {
     },
   };
 
-  const googleSignUp = async (e) => {
-    e.preventDefault();
+  // const googleSignUp = async (e) => {
+  //   e.preventDefault();
 
-    await signInWithPopup(auth, googleProvider)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        setEmail('');
-        setPassword('');
-        alert('Logged in Successfully!!!');
-        navigate('/home');
-        console.log(user);
-      })
-      .catch((err) => {
-        alert('Log in Failed');
-        console.log('An error occurred', err.message);
-      });
-  };
+  //   await signInWithPopup(auth, googleProvider)
+  //     .then((userCredential) => {
+  //       const user = userCredential.user;
+  //       setEmail('');
+  //       setPassword('');
+  //       alert('Signed up Successfully!!!');
+  //       navigate('/home');
+  //       console.log(user);
+  //     })
+  //     .catch((err) => {
+  //       alert(err.message);
+  //       console.log('An error occurred', err.message);
+  //     });
+  // };
 
   return (
     <main>
@@ -187,13 +187,13 @@ const SignUp = () => {
               <button type='submit' className='signup-button'>
                 Sign up
               </button>
-              <button
+              {/* <button
                 type='submit'
                 onClick={googleSignUp}
                 className='signin-button'
               >
                 Sign up with Google
-              </button>
+              </button> */}
               <p className='account'>
                 Already have an account?{' '}
                 <NavLink className='navlink' to='/login'>
